@@ -5,7 +5,7 @@
     <title>4D10_Kadai1</title>
   </head>
   <body>
-    <div>Teachable Machine Image Model</div>
+    <div>在室監視カメラ</div>
     <button type="button" onclick="init()">Start</button>
     <div id="webcam-container"></div>
     <div id="label-container"></div>
@@ -42,9 +42,11 @@
             // append elements to the DOM
             document.getElementById("webcam-container").appendChild(webcam.canvas);
             labelContainer = document.getElementById("label-container");
-            for (let i = 0; i < maxPredictions; i++) { // and class labels
+            for (let i = 0; i < maxPredictions+1; i++) { // and class labels
                 labelContainer.appendChild(document.createElement("div"));
             }
+
+
         }
 
         async function loop() {
