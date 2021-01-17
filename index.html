@@ -68,8 +68,15 @@
             labelContainer = document.getElementById("label-container");
             labelContainer.appendChild(document.createElement("div"));
             
-            //classPrediction = 
-            //labelContainer.childNodes[-1].innerHTML = classPrediction;
+            room_state = 1;
+            if(prediction[1].probability.toFixed(2) > 90){
+                room_state = !room_state;
+            }
+            if(room_state){
+                labelContainer.childNodes[2].innerHTML = "在室";
+            } else {
+                labelContainer.childNodes[2].innerHTML = "外出中";
+            }
         }
     </script>
 
